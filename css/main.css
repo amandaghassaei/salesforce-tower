@@ -1,0 +1,27 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: black;
+}
+
+#three {
+	width: 100%;
+	height: 100%;
+}
+
+#instructions {
+	color: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	line-height: 1.5;
+	margin: 0;
+    font-size: 14px;
+}
+
+#instructions a {
+	color: #eee;
+	/* text-decoration: none; */
+}

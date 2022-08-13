@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "allowJs": false,
+    "strict": true,
+    "declaration": false,
+    "target": "es6",
+    "lib": ["es2015", "dom"],
+    "typeRoots": ["node_modules/@types"],
+  },
+  "include": [
+    "src"
+  ],
+}
