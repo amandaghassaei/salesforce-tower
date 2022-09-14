@@ -28,7 +28,7 @@ Rendering Controls:
 ## Import New Video
 
 - Paste/drag .mp4 videos directly into webpage
-- Ideally videos should have dimensions 256 x 70 or some multiple of that, but other aspect ratios will work (see horizontal/vertical offset controls to adjust the crop)
+- Ideally videos should have aspect ratio 256x70 (so videos with dimensions 256x70, 512x140, 1024x280, ...etc, will fit perfectly), but other aspect ratios will work (see horizontal/vertical offset controls to adjust the crop)
 - Video must be type .mp4
 
 
