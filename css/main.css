@@ -25,3 +25,7 @@ html, body {
 	color: #eee;
 	/* text-decoration: none; */
 }
+
+#input {
+	display: none;
+}

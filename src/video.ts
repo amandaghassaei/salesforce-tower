@@ -77,3 +77,15 @@ window.addEventListener('drop', (e: DragEvent) => {
 	}
 	badFileAlert();
 }, false);
+
+const fileInput = document.getElementById('input') as HTMLInputElement;
+fileInput.onchange = () => {
+	const { files } = fileInput;
+	if (!files || files.length === 0) return;
+	const file = files[0];
+	if(!loadFile(file)) badFileAlert();
+}
+document.getElementById('upload')!.onclick = (e) => {
+	e.preventDefault();
+	fileInput.click();
+}
