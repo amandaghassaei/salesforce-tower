@@ -1,5 +1,7 @@
 # salesforce-tower
 
+![application screenshot](./screenshot.jpg)
+
 3D visualization for artwork on Salesforce Tower, rendered with threejs using the bloom effect and some other custom shaders.
 
 Live demo: [apps.amandaghassaei.com/salesforce-tower/](https://apps.amandaghassaei.com/salesforce-tower/)
