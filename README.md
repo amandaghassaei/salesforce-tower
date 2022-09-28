@@ -7,6 +7,13 @@
 Live demo: [apps.amandaghassaei.com/salesforce-tower/](https://apps.amandaghassaei.com/salesforce-tower/)
 
 
+## Import New Video
+
+- Paste/drag .mp4 videos directly into webpage
+- Ideally videos should have aspect ratio 256x70 (i.e. videos with dimensions 256x70, 512x140, 1024x280, etc. will fit perfectly), but other aspect ratios will work (see horizontal/vertical. offset controls to adjust the crop)
+- Video must be type .mp4
+
+
 ## Controls
 
 Orbit Controls:
@@ -27,13 +34,6 @@ Rendering Controls:
 - "Bloom Strength" affects the glow coming off the LEDs
 - "Brightness" sets the overall brightness of the LED display
 - "Ambient Light Level" sets amount of ambient light on the surrounding buildings
-
-
-## Import New Video
-
-- Paste/drag .mp4 videos directly into webpage
-- Ideally videos should have aspect ratio 256x70 (i.e. videos with dimensions 256x70, 512x140, 1024x280, etc. will fit perfectly), but other aspect ratios will work (see horizontal/vertical. offset controls to adjust the crop)
-- Video must be type .mp4
 
 
 ## How 3D model was generated:
