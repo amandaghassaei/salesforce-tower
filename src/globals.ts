@@ -10,6 +10,7 @@ export const PARAMS = {
 	bloomStrength: 2,
 	bloomRadius: 0.4,
 	brightness: 1.5,
+    saturation: 1,
 	needFullRender: true,
 	showBuildings: true,
 	ambientLightLevel: 0.7,

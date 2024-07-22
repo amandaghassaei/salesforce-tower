@@ -70,6 +70,7 @@ const lowResDisplayShader = {
 		vOffset: { value: PARAMS.verticalOffset },
 		uZoom: { value: PARAMS.zoom },
 		vScaleFactor: { value: 1 },
+        uSaturation: {value: PARAMS.saturation},
 		uBrightness: {value: PARAMS.brightness},
 		uGamma: {value: PARAMS.gamma},
 		tDiffuse1: { value: null },

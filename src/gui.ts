@@ -36,9 +36,19 @@ videoFolder.add(PARAMS, 'speedFactor', 0.1, 5, 0.01).name('Playback Speed').onCh
 	video.playbackRate = value;
 }));
 
+videoFolder.add(PARAMS, 'saturation', 0.1, 3).name('Saturation').onChange((value) => {
+	copyVideoMaterial.uniforms.uSaturation.value = value;
+});
+
+videoFolder.add(PARAMS, 'brightness', 0.1, 3).name('Brightness').onChange((value) => {
+	copyVideoMaterial.uniforms.uBrightness.value = value;
+});
+
 videoFolder.add(PARAMS, 'gamma', 0.1, 2, 0.01).name('Gamma').onChange((value => {
 	copyVideoMaterial.uniforms.uGamma.value = value;
 }));
+
+
 
 videoFolder.add(callbacks, 'restartVideo').name('Restart Video');
 
@@ -63,10 +73,6 @@ renderingFolder.add(PARAMS, 'bloomStrength', 0.0, 3).name('Bloom Strength').onCh
 // renderingFolder.add(PARAMS, 'bloomRadius', 0.0, 2).name('Bloom Radius').onChange((value) => {
 // 	bloomPass.radius = Number(value);
 // });
-
-renderingFolder.add(PARAMS, 'brightness', 0.1, 3).name('Brightness').onChange((value) => {
-	copyVideoMaterial.uniforms.uBrightness.value = value;
-});
 
 renderingFolder.add(PARAMS, 'ambientLightLevel', 0, 1).name('AmbientLight').onChange((value) => {
 	ambientLights.forEach(light => {
