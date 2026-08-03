@@ -28,24 +28,25 @@ window.addEventListener('keydown', (e) => {
 	} 
 });
 
+// Track the current object URL so we can revoke it when a new file is loaded.
+let currentObjectUrl: string | undefined;
+
 function loadFile(file: File) {
 	if (file.type !== "video/mp4") {
 		return false;
 	}
-	reader.onload = (e) => {
-		// Get data url.
-		const dataUrl = e.target?.result as string | undefined;
-		if (!dataUrl) return;
-		video.src = dataUrl;
-		video.play();
-		video.playbackRate = PARAMS.speedFactor;
-	}; 
-	reader.readAsDataURL(file);
+	// Use a blob URL rather than a base64 data URL. Data URLs inflate the file
+	// ~33%, must be fully buffered in memory, aren't seekable, and exceed
+	// browser length limits on large videos (Safari errors, Chrome truncates).
+	if (currentObjectUrl) URL.revokeObjectURL(currentObjectUrl);
+	currentObjectUrl = URL.createObjectURL(file);
+	video.src = currentObjectUrl;
+	video.play();
+	video.playbackRate = PARAMS.speedFactor;
 	return true;
 }
 
 // Paste event.
-const reader = new FileReader();
 window.addEventListener('paste', e => {
     e.preventDefault();
 	// @ts-ignore
